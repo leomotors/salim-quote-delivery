@@ -2,6 +2,7 @@
   "name": "salim-quote-delivery",
   "displayName": "Salim Quote Delivery",
   "description": "Delivery Salim Quote at desire",
+  "publisher": "Leomotors",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.58.0"
