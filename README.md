@@ -12,7 +12,9 @@ You will have Salim at Home
 
 ## Requirements
 
-Internet Connection
+Internet Connection..., jk
+
+This Extension will call API of [This QUALITY Repository](https://github.com/narze/awesome-salim-quotes) to get the quotes for you.
 
 ## Release Notes
 
