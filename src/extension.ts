@@ -12,7 +12,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	}).then(response => response.json())
 		.then(json => {
 			for (let quote of json.quotes) {
-				let toAdd = quote.body
+				let toAdd: string = quote.body
 				if (QuoteArray.includes(toAdd))
 					console.log(`[IMPORT WARNING] Duplicate Quote : ${toAdd}`)
 				else
@@ -22,7 +22,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		})
 		.catch(err => console.log(err))
 
-	let disposable = vscode.commands.registerCommand('salim-quote-delivery.getSalimQuote', () => {
+	let disposable: vscode.Disposable = vscode.commands.registerCommand('salim-quote-delivery.getSalimQuote', () => {
 		let randIndex: number = Math.floor(Math.random() * QuoteArray.length)
 
 		vscode.window.showInformationMessage(`${QuoteArray[randIndex]}`);
