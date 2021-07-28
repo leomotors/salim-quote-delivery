@@ -1,26 +1,34 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import fetch from "node-fetch";
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
-	
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "salim-quote-delivery" is now active!');
+const SalimAPIUrl: string = "https://watasalim.vercel.app/api/quotes"
+let QuoteArray: string[] = []
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('salim-quote-delivery.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Salim Quote Delivery!');
+export async function activate(context: vscode.ExtensionContext) {
+
+	fetch(SalimAPIUrl, {
+		method: "GET",
+		headers: { "Content-type": "application/json;charset=UTF-8" }
+	}).then(response => response.json())
+		.then(json => {
+			for (let quote of json.quotes) {
+				let toAdd = quote.body
+				if (QuoteArray.includes(toAdd))
+					console.log(`[IMPORT WARNING] Duplicate Quote : ${toAdd}`)
+				else
+					QuoteArray.push(toAdd)
+			}
+			console.log("[EXTENSION'S QUOTE READY] Successfully pulled quote data from narze's repository")
+		})
+		.catch(err => console.log(err))
+
+	let disposable = vscode.commands.registerCommand('salim-quote-delivery.getSalimQuote', () => {
+		let randIndex: number = Math.floor(Math.random() * QuoteArray.length)
+
+		vscode.window.showInformationMessage(`${QuoteArray[randIndex]}`);
 	});
 
 	context.subscriptions.push(disposable);
 }
 
-// this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
