@@ -57,7 +57,6 @@
     "@types/node-fetch": "^2.5.12",
     "axios": "^0.21.1",
     "fetch": "^1.1.0",
-    "node-fetch": "^2.6.1",
-    "vscode": "^1.1.37"
+    "node-fetch": "^2.6.1"
   }
 }
