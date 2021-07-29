@@ -15,13 +15,3 @@ You will have Salim at Home
 Internet Connection..., jk
 
 This Extension will call API of [This QUALITY Repository](https://github.com/narze/awesome-salim-quotes) to get the quotes for you.
-
-## Release Notes
-
-> Users appreciate release notes as you update your extension.
-
-... Okay
-
-### 1.0.0
-
-Initial Release

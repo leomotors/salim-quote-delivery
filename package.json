@@ -3,7 +3,11 @@
   "displayName": "Salim Quote Delivery",
   "description": "Delivery Salim Quote at desire",
   "publisher": "Leomotors",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "repository": {
+    "type":"git",
+    "url": "https://github.com/Leomotors/salim-quote-delivery"
+  },
   "engines": {
     "vscode": "^1.58.0"
   },
