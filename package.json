@@ -3,7 +3,7 @@
   "displayName": "Salim Quote Delivery",
   "description": "Delivery Salim Quote at desire",
   "publisher": "Leomotors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/Leomotors/salim-quote-delivery"
@@ -15,7 +15,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:salim-quote-delivery.getSalimQuote"
+    "*"
   ],
   "main": "./dist/extension.js",
   "contributes": {
