@@ -4,7 +4,7 @@ This is the README for ~~your~~**OUR** extension "Salim Quote Delivery"
 
 ## How to use
 
-\> Delivery me Salim Quote!
+\> Deliver me Salim Quote!
 
 ## Features
 
