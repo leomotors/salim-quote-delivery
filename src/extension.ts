@@ -2,10 +2,13 @@ import * as vscode from 'vscode';
 import fetch from "node-fetch";
 
 const SalimAPIUrl: string = "https://watasalim.vercel.app/api/quotes"
+const LinkToHeaven: string = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
 let QuoteArray: string[] = []
 
 export async function activate(context: vscode.ExtensionContext) {
 
+	// * Fetching Quotes from API
 	fetch(SalimAPIUrl, {
 		method: "GET",
 		headers: { "Content-type": "application/json;charset=UTF-8" }
@@ -23,9 +26,16 @@ export async function activate(context: vscode.ExtensionContext) {
 		.catch(err => console.log(err))
 
 	let disposable: vscode.Disposable = vscode.commands.registerCommand('salim-quote-delivery.getSalimQuote', () => {
+		// * Random Quote Index
 		let randIndex: number = Math.floor(Math.random() * QuoteArray.length)
 
+		// * Show it
 		vscode.window.showInformationMessage(`${QuoteArray[randIndex]}`);
+
+		// * You have 3% Chance to be sent to Heaven
+		if (Math.floor(Math.random() * 100) < 3) {
+			vscode.env.openExternal(vscode.Uri.parse(LinkToHeaven))
+		}
 	});
 
 	context.subscriptions.push(disposable);
