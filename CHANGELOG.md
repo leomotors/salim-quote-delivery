@@ -2,6 +2,11 @@
 
 All notable changes to the "salim-quote-delivery" extension will be documented in this file.
 
+## [1.0.4] - 2021-08-16
+
+- Disable Duplicate Quote Checking to Improve Performance
+- Increase Rick Roll Chance (3% -> 5%)
+
 ## [1.0.3] - 2021-08-15
 
 - Added something that is important
