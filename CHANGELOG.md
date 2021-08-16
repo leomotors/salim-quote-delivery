@@ -2,6 +2,10 @@
 
 All notable changes to the "salim-quote-delivery" extension will be documented in this file.
 
+## [1.0.5] - 2021-08-16
+
+- README Change and Typo in description have been fixed
+
 ## [1.0.4] - 2021-08-16
 
 - Disable Duplicate Quote Checking to Improve Performance
