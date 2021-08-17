@@ -2,6 +2,12 @@
 
 All notable changes to the "salim-quote-delivery" extension will be documented in this file.
 
+## [1.0.6] - 2021-08-17
+
+- Added new Command : Show me all Salim Quote => Bringing you to Quote's Source Repository to see all Quotes
+- Added Error Checking
+- Added trailing Quote ID after every Quotes
+
 ## [1.0.5] - 2021-08-16
 
 - README Change and Typo in description have been fixed

@@ -3,7 +3,7 @@
   "displayName": "Salim Quote Delivery",
   "description": "Deliver Salim Quote at desire",
   "publisher": "Leomotors",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/Leomotors/salim-quote-delivery"
@@ -23,6 +23,10 @@
       {
         "command": "salim-quote-delivery.getSalimQuote",
         "title": "Deliver me Salim Quote!"
+      },
+      {
+        "command": "salim-quote-delivery.showAllQuotes",
+        "title": "Show me All Salim Quotes"
       }
     ]
   },
