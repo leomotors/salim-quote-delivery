@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 const SALIM_API_URL = 'https://watasalim.vercel.app/api/quotes';
 
-const ALL_SLIM_QUOTE_API_URL =
+const ALL_SALIM_QUOTE_API_URL =
   'https://github.com/narze/awesome-salim-quotes/blob/main/README.md';
 
 const LINK_TO_HEAVEN = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
@@ -66,7 +66,7 @@ export async function activate(context: vscode.ExtensionContext) {
       'salim-quote-delivery.showAllQuotes',
       () => {
         vscode.env.openExternal(
-          vscode.Uri.parse(ALL_SLIM_QUOTE_API_URL)
+          vscode.Uri.parse(ALL_SALIM_QUOTE_API_URL)
         );
       }
     );
